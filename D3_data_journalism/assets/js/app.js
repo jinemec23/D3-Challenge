@@ -22,6 +22,8 @@ var chartGroup = svg.append('g')
     .attr('transform', `translate(${margin.left}, ${margin.top})`)
     .attr('class','chart');
 
+var chosenAxis = "";
+
 d3.csv('assets/data/data.csv').then(function(incomingdata){
     incomingdata.forEach(function(data){
         data.poverty = +data.poverty;
